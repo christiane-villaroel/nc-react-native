@@ -20,7 +20,7 @@ const HomeNavigator = () =>{
             <Stack.Screen 
                 name='Home'
                 component={HomeScreen}
-                options={{title: 'home'}}
+                options={{title: 'Home'}}
             />
         </Stack.Navigator>
     )

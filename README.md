@@ -30,8 +30,15 @@ Nucamp Coding Bootcamp React Native Course Project
 - React Native Navigation Library added to dispay each campsite feature once onPress activate in the campsite Directory. 
 - Debugging: Campsite useState object syntax error corrected in RenderCampsite.js file
 
-#### 11/2/22:
+#### 11/2/22: 1:00pm
 - React Navigation Drawer Installed
 - HomeScreen.js file created and import to MainComponent.js file/ 
 - <Stack.Navigator> component used to create Side Draw menu. Nesting two <Stack.screen> componenets to creat side draw menu options for Home & Directory page. 
+
+#### 11/2/22: 1:55pm
+
+- Data filse Downloaded and Created: promotions.js,comments.js,partners.js
+- HomeScreen.js Update: <View> component replaced with <ScrollView> component since we have a set small number of items to render on screen.
+-HomeScreen.js: FeaturedItem anonymous function const created to pass each Data file as a prop and render on HomeScreen. Only object items with bolean value of true in feature property will be rendered (done by using filter method on each state of each sets of data)
+
 
