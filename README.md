@@ -30,3 +30,8 @@ Nucamp Coding Bootcamp React Native Course Project
 - React Native Navigation Library added to dispay each campsite feature once onPress activate in the campsite Directory. 
 - Debugging: Campsite useState object syntax error corrected in RenderCampsite.js file
 
+#### 11/2/22:
+- React Navigation Drawer Installed
+- HomeScreen.js file created and import to MainComponent.js file/ 
+- <Stack.Navigator> component used to create Side Draw menu. Nesting two <Stack.screen> componenets to creat side draw menu options for Home & Directory page. 
+
