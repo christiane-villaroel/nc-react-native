@@ -32,7 +32,6 @@ function RenderCampsite(props) {
                     props.isFavorite
                     ?console.log('Already set as favorite')
                     :props.markFavorite()
-                    
                 }
                 />
             </Card>
