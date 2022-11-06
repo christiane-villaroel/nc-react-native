@@ -55,3 +55,9 @@ Nucamp Coding Bootcamp React Native Course Project
   - <Mission> Component nested insited the <Scrollview> parent container, as well as the
 - ContactScreen.js:
   - <Card> componenet used to render and layout contact information.
+
+#### 11/6/22:
+
+- Comments data added as comment section in <CampsiteInfoScreen> using <FlatList> to render each item in the COMMENTS object.
+  - Using .filter() in the data attritbute, of the <FlatList> component, to display only the comment items who's ID match the campsite ID.
+- <Icon> using the icon component provided by react native I added the font-awesone heart on each Campsite in the <RenderCampsite> screen. Setting Local state to keep track of when a user touches the heart icon to mark as their favorite, changing the state from a false to a true bolean value
