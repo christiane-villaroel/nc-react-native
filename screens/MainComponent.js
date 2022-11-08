@@ -43,7 +43,7 @@ const HomeNavigator = () =>{
 const AboutNavigator = ()=>{
     const Stack = createStackNavigator();
     return(
-        <Stack.Navigator screenOptions={screenOptions}>
+        <Stack.Navigator initialRouteName='About' screenOptions={screenOptions}>
             <Stack.Screen
             name='About'
             component={AboutScreen}
