@@ -3,13 +3,19 @@ import  Constants  from 'expo-constants';
 import { View,Platform, StyleSheet,Text,Image } from 'react-native';
 import { Icon } from 'react-native-elements';
 import { createStackNavigator } from '@react-navigation/stack';
-import CampsiteInfoScreen from './CampsiteInfoScreen';
-import DirectoryScreen from './DirectoryScreen';
 import { 
     createDrawerNavigator,
     DrawerContentScrollView,
     DrawerItemList 
 } from '@react-navigation/drawer';
+import { useDispatch } from 'react-redux';
+import { useEffect } from 'react';
+import { fetchPartners } from '../features/partners/partnersSlice';
+import { fetchCampsites } from '../features/campsites/campsitesSlice';
+import { fetchPromotions } from '../features/promotions/promotionsSlice';
+import { fetchComments } from '../features/comments/commentsSlice';
+import CampsiteInfoScreen from './CampsiteInfoScreen';
+import DirectoryScreen from './DirectoryScreen';
 import HomeScreen from './HomeScreen';
 import ContactScreen from './ContactScreen';
 import AboutScreen from './AboutScreen';
@@ -127,7 +133,7 @@ const DirectoryNavigator = () =>{
 const CusomDrawerContent = (props) => {
     return (
         <DrawerContentScrollView {...props}>
-            <View style={styles.drawHeader}>
+            <View style={styles.drawerHeader}>
                 <View style={{flex:1}}>
                     <Image source={logo} style={styles.drawerImage}/>
                 </View>
@@ -141,6 +147,14 @@ const CusomDrawerContent = (props) => {
 }
 
 const Main = ()=> {
+    const dispatch = useDispatch();
+
+    useEffect(() =>{
+        dispatch(fetchCampsites());
+        dispatch(fetchPromotions());
+        dispatch(fetchPartners());
+        dispatch(fetchComments());
+    },[dispatch]);
 
     return( 
         <View style={{flex:1, paddingTop: Platform.OS === 'ios'? 0 : Constants.statusBarHeight}}>
