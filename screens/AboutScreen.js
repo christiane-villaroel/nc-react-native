@@ -1,3 +1,4 @@
+import * as React from "react";
 import { useState } from "react";
 import { View } from "react-native";
 import { Text,ScrollView } from "react-native";

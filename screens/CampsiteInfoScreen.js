@@ -1,3 +1,4 @@
+import * as React from "react";
 import { useState } from "react";
 import { FlatList,Text,View } from "react-native";
 import { StyleSheet } from "react-native";

@@ -1,13 +1,19 @@
+import * as React from "react";
 import  Constants  from 'expo-constants';
-import { View,Platform, StyleSheet } from 'react-native';
+import { View,Platform, StyleSheet,Text,Image } from 'react-native';
 import { Icon } from 'react-native-elements';
 import { createStackNavigator } from '@react-navigation/stack';
 import CampsiteInfoScreen from './CampsiteInfoScreen';
 import DirectoryScreen from './DirectoryScreen';
-import { createDrawerNavigator } from '@react-navigation/drawer';
+import { 
+    createDrawerNavigator,
+    DrawerContentScrollView,
+    DrawerItemList 
+} from '@react-navigation/drawer';
 import HomeScreen from './HomeScreen';
 import ContactScreen from './ContactScreen';
 import AboutScreen from './AboutScreen';
+import logo from '../assets/images/logo.png'
 
 const Drawer = createDrawerNavigator();
 
@@ -118,6 +124,22 @@ const DirectoryNavigator = () =>{
     )
 };
 
+const CusomDrawerContent = (props) => {
+    return (
+        <DrawerContentScrollView {...props}>
+            <View style={styles.drawHeader}>
+                <View style={{flex:1}}>
+                    <Image source={logo} style={styles.drawerImage}/>
+                </View>
+                <View style={{flex:1}}>
+                    <Text style={styles.drawerHeaderText}>NuCamp</Text>
+                </View>
+            </View>
+            <DrawerItemList {...props} labelStyle={{ fontWeight: 'bold' }} />
+        </DrawerContentScrollView>
+    );
+}
+
 const Main = ()=> {
 
     return( 
@@ -202,6 +224,24 @@ const styles = StyleSheet.create({
         marginLeft:10,
         color:'#fff',
         fontSize:24
+    },
+    drawerHeader: {
+        backgroundColor: '#5637DD',
+        height: 140,
+        alignItems: 'center',
+        justifyContent: 'center',
+        flex: 1,
+        flexDirection: 'row'
+    },
+    drawerHeaderText: {
+        color: '#fff',
+        fontSize: 24,
+        fontWeight: 'bold'
+    },
+    drawerImage: {
+        margin: 10,
+        height: 60,
+        width: 60
     }
 })
 

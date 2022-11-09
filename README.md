@@ -61,3 +61,29 @@ Nucamp Coding Bootcamp React Native Course Project
 - Comments data added as comment section in <CampsiteInfoScreen> using <FlatList> to render each item in the COMMENTS object.
   - Using .filter() in the data attritbute, of the <FlatList> component, to display only the comment items who's ID match the campsite ID.
 - <Icon> using the icon component provided by react native I added the font-awesone heart on each Campsite in the <RenderCampsite> screen. Setting Local state to keep track of when a user touches the heart icon to mark as their favorite, changing the state from a false to a true bolean value
+
+### 11/7/22:
+
+-<MainComponent> file update to Nucamp header with logo, usiing a <CustomDrawerContent> function component.
+
+- In the component I used the <DrawContentScrollView> as the contaiernt to render the name of the app (NuCamp) and the logo
+
+### 11/9/22:
+
+- Set Up react Redux packages:
+  - Installed: redux@4.1.2 react-redux@7.2.6 @reduxjs/toolkit@1.7.2
+  - created redux folder and store.js file
+  - <baseUrl> file to holde http ip address and port.
+  - made slice files to hold reducer functions for the following features:
+    - Partners
+    - Comments
+    - Campsites
+    - Promotions
+      - For Each file I copied the code given to me from the nucamp coding bootcamp course.
+
+# Issues:
+
+## Expo Go Update Issue-
+
+- I was running this application on the expo go app however as of 11/5/22 there was a new update that no longer supports expo sdk version below 45. With the help of instructors and fellow classmates I was able to update sdk to 45 and react native animate to 3.4.2. However; this did not resolve the issue of rendering the nucampsite app on expo go. Now I am running this app on android studio emulator using the pixel 5 emulator to view this application.
+- still un able to view this aplication on expo go
