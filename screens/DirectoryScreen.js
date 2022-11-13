@@ -9,7 +9,6 @@ import { View } from "react-native";
 
 const DirectoryScreen = ({navigation}) => {
     const campsites = useSelector((state)=>state.campsites)
-    console.log(campsites.isLoading)
     if(campsites.isLoading){
         return <Loading/>
     }

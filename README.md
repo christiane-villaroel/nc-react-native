@@ -81,6 +81,14 @@ Nucamp Coding Bootcamp React Native Course Project
     - Promotions
       - For Each file I copied the code given to me from the nucamp coding bootcamp course.
 
+### 11/9/22:
+
+- Activity Indicator:
+  - Created loading Screen component to load when app is waiting for fetch request to be fullfilled
+    - if fullfilled and reject then err message will be rendered
+    - if fullfulled then data from json-server will be rendered on screen accordingly
+    - Redux used to store data and useSelector used to maintain state for campsites, promotions and partners data.
+
 # Issues:
 
 ## Expo Go Update Issue-
