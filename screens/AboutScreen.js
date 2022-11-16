@@ -1,4 +1,5 @@
 import * as React from "react";
+import * as Animatable from 'react-native-animatable';
 import { useSelector } from "react-redux";
 import { Text,ScrollView } from "react-native";
 import { Avatar, Card, ListItem } from "react-native-elements";
@@ -37,11 +38,17 @@ const AboutScreen = () =>{
     if(partners.errMess){
         return(<ScrollView>
             <Mission/>
-            <Card>
-                <Card.Title>Community Partners</Card.Title>
-                <Card.Divider/>
-                <Text>{partners.errMess}</Text>
-            </Card>
+            <Animatable.View
+                animation='fadeInDown'
+                duration={2000}
+                delay={1000}
+                >
+                <Card>
+                    <Card.Title>Community Partners</Card.Title>
+                    <Card.Divider/>
+                    <Text>{partners.errMess}</Text>
+                </Card>
+            </Animatable.View>
         </ScrollView>)
     }
     return (

@@ -1,4 +1,5 @@
 import * as React from "react";
+import * as Animatable from 'react-native-animatable';
 import { useSelector } from "react-redux";
 import { FlatList } from "react-native";
 import { Tile} from "react-native-elements";
@@ -22,16 +23,19 @@ const DirectoryScreen = ({navigation}) => {
 
     const renderDirectoryItem = ({item: campsite}) => {
         return (
-            <Tile
-            title={campsite.name} 
-            caption={campsite.description}
-            featured
-            onPress={()=> 
-                navigation.navigate('CampsiteInfo',{campsite})
-            }
-            imageSrc = {{uri: baseUrl + campsite.image}}
-            />
-               
+            <Animatable.View
+                animation='fadeInRightBig'
+                duration={2000}
+                >
+                <Tile   title={campsite.name} 
+                    caption={campsite.description}
+                    featured
+                    onPress={()=> 
+                        navigation.navigate('CampsiteInfo',{campsite})
+                    }
+                    imageSrc = {{uri: baseUrl + campsite.image}}
+                    />
+            </Animatable.View>
         );
     }
     return(
