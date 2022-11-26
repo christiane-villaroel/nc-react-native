@@ -95,3 +95,4 @@ Nucamp Coding Bootcamp React Native Course Project
 
 - I was running this application on the expo go app however as of 11/5/22 there was a new update that no longer supports expo sdk version below 45. With the help of instructors and fellow classmates I was able to update sdk to 45 and react native animate to 3.4.2. However; this did not resolve the issue of rendering the nucampsite app on expo go. Now I am running this app on android studio emulator using the pixel 5 emulator to view this application.
 - still un able to view this aplication on expo go
+as
