@@ -28,7 +28,7 @@ import { fetchPartners } from '../features/partners/partnersSlice';
 import { fetchCampsites } from '../features/campsites/campsitesSlice';
 import { fetchPromotions } from '../features/promotions/promotionsSlice';
 import { fetchComments } from '../features/comments/commentsSlice';
-import FavoritesScreen from './FavoritesScreen';
+import FavoritesScreen from './FavoritesScreens';
 import LoginScreen from './LoginScreen';
 import { getFocusedRouteNameFromRoute } from '@react-navigation/core';
 import NetInfo from '@react-native-community/netinfo';
