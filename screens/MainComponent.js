@@ -262,6 +262,16 @@ const Main = () => {
         return unsubscribeNetInfo;
     }, []);
 
+    const showNetInfo = async () => {
+        const connection = await NetInfo.fetch();
+        Platform.OS ==="ios"
+            ?Alert.alert("Initial Network Connectivity Type: ", connection.type)
+            :ToastAndroid.show(
+                "Initial Network Connectivity Type: " + connection.type,
+                ToastAndroid.LONG
+            );
+    };
+
     const handleConnectivityChange = (connectionInfo) => {
         let connectionMsg = 'You are now connected to an active network.';
         switch (connectionInfo.type) {
